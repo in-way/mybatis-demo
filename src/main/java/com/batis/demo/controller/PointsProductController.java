@@ -32,13 +32,26 @@ public class PointsProductController extends BaseController {
     IPointsProductService pointsProductService;
     @Autowired
     IOrderFormService orderFormService;
+    /**
+     * 统一报文测试和解密测试
+     * @author ivy
+     * @date 2021/9/3 11:28
+     * []
+     * java.util.List<com.batis.demo.entity.PointsProduct>
+     */
     @RequestMapping("/list")
     public List<PointsProduct> test(){
         List<PointsProduct> pointsProducts = pointsProductService.mySelectList();
         return pointsProducts;
     }
 
-
+    /**
+     * 新增添加基础信息加密和添加基础信息
+     * @author ivy
+     * @date 2021/9/3 11:28
+     * []
+     * int
+     */
     @RequestMapping("/add")
     public int add(){
         PointsProduct pointsProduct = new PointsProduct();

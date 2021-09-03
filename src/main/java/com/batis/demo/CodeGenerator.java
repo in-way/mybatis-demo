@@ -19,6 +19,9 @@ import java.util.Scanner;
 
 // 演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
 public class CodeGenerator {
+    private final static String DATA_RUL = "jdbc:mysql://10.104.10.171:3306/gbps?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull";
+    private final static String USER_NAME = "dev_gbps";
+    private final static String PASSWORD = "dev@123456";
 
     /**
      * <p>
@@ -54,11 +57,11 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://10.104.10.171:3306/gbps?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull");
+        dsc.setUrl(DATA_RUL);
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("dev_gbps");
-        dsc.setPassword("dev@123456");
+        dsc.setUsername(USER_NAME);
+        dsc.setPassword(PASSWORD);
         mpg.setDataSource(dsc);
 
         // 包配置
