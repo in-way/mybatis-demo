@@ -1,7 +1,11 @@
 spring:
   profiles:
-    include: "druid"
+    active: dev
+    include: 'druid'
+#  messages:
+#    basename: i18n/messages #相对路径 首部请勿添加斜杠
 # MyBatis配置
+
 mybatis:
   # 搜索指定包别名
   typeAliasesPackage: com.batis.demo.test.**entity
